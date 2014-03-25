@@ -1,0 +1,78 @@
+
+/**
+ * CodeInfo
+ * @author JBALDWIN
+ * Date: 24/10/13
+ */
+public class NewWeight {
+	
+	//Global Variables To Hold Weight
+	
+	int stones1;
+	int pounds1;
+	int ounces1;
+	
+	public NewWeight (int stones, int pounds, int ounces){
+
+
+	
+	}
+
+	
+	public boolean validWeight() {//VALID WEIGHT CHECK
+		
+		
+		NewWeight validWeightobj = new NewWeight(stones1,pounds1,ounces1);
+		//START OF VALID CHECK
+		if (stones1 < 0){
+			return false;
+		}
+		
+		if (pounds1 > 13){
+			return false;
+		}
+		
+		if (pounds1 < 0){
+			return false;
+		}
+		
+		if (ounces1 < 0){
+			return false;
+		}
+		
+		if (ounces1 > 15){
+			return false;
+		}
+		
+		else {
+			return true;
+		}
+		
+		//END OF VALID CHECK
+	}
+	
+	
+	public void addWeight(int stones2, int pounds2, int ounces2){
+		
+		int totalPounds;
+		int totalStones;
+		int totalOunces;
+		
+		totalStones = (stones1 + stones2);
+		totalPounds = (pounds1 + pounds2);
+		totalOunces = (ounces1 + ounces2);
+		
+		System.out.println(totalStones);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

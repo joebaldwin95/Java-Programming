@@ -1,0 +1,51 @@
+
+public class NewWeight {
+	public NewWeight (int stones, int pounds, int ounces){
+
+
+	
+	}
+
+	
+	public boolean validWeight() {
+		
+		int stones1;
+		int pounds1;
+		int ounces1;
+		
+		NewWeight validWeightobj = new NewWeight(stones1,pounds1,ounces1);
+		
+		if (stones1 < 0){
+			return false;
+		}
+		
+		if (pounds1 > 13){
+			return false;
+		}
+		
+		if (pounds1 < 0){
+			return false;
+		}
+		
+		if (ounces1 < 0){
+			return false;
+		}
+		
+		if (ounces1 > 15){
+			return false;
+		}
+		
+		else {
+			return true;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

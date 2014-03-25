@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class NewWeightTest {
+
+	public static void main(String[] args) { //TEST VALID WEIGHT
+		
+		
+		//Local Variables to hold test values
+		int teststones = 0;
+		int testpounds = 0;
+		int testounces = 0;
+		
+		
+		
+		//Takes user input to pass to weight check
+		Scanner in = new Scanner (System.in);
+		System.out.println("Enter Stones");
+		teststones = in.nextInt();
+		System.out.println("Enter Pounds");
+		testpounds = in.nextInt();
+		System.out.println("Enter Ounces");
+		testounces = in.nextInt();
+		
+
+		//Calls Method
+		NewWeight testWeightValid = null;
+		
+		System.out.println("testWeightValid = " + testWeightValid);
+		
+		
+		testWeightValid = new NewWeight(teststones,testpounds,testounces);
+
+		System.out.println("testWeightValid = " + testWeightValid);
+		
+		
+		//Prints result of weight check
+		boolean result = testWeightValid.validWeight();
+		System.out.println(result);
+	
+	if (result = true){	
+		
+	NewWeight testAddition = new NewWeight(teststones, testpounds, testounces);
+
+	
+	System.out.println("Please enter the stone you wish to add");
+	teststones = in.nextInt();
+	System.out.println("Please enter the pounds you wish to add");
+	testpounds = in.nextInt();
+	System.out.println("Please enter the ounces you wish to add");
+	testounces = in.nextInt();
+	
+	testAddition.addWeight(teststones,testpounds,testounces);
+	
+	
+	
+	
+	
+	}
+	
+	
+	}
+	
+}
+	
+	
+	
+	
+	
+	
+
+
