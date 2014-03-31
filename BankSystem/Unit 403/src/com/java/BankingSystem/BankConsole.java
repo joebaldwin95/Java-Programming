@@ -2,8 +2,16 @@ package com.java.BankingSystem;
 
 import java.util.Scanner;
 
+/**
+ * BankConsole is the class a user will interact with, this creates and calls all accounts, customers and their respective methods.
+ * @author Joe Baldwin
+ */
 public class BankConsole {
-
+	
+	/**
+	  * The main method contains all the code for this class, See commments for more info. 
+	  * @author Joe Baldwin
+	  */
 	public static void main(String[] args) {
 		//INITIALIZATION START - INITIALIZE SCANNER AND CREATES FIRST CUSTOMER OBJECT
 		@SuppressWarnings("resource")

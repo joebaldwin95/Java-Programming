@@ -18,6 +18,10 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.Action;
 
+/**
+ * Displays a users balance to them.
+ * @author Joe Baldwin
+ */
 public class BalanceDisplayer {
 
 	private JFrame frame;
@@ -92,7 +96,7 @@ public class BalanceDisplayer {
 			Customer customer = new Customer();
 			customer.setFname("Joe");
 			customer.setLname("Baldwin");
-			account.forceDeposit(159.10);
+			account.forceDeposit(159);
 			textField_1.setText("£" + account.getBalance());
 			textField.setText(customer.getFname() + " " + customer.getLname());
 			

@@ -23,8 +23,8 @@ public class CurrentAccount extends Account {
 	public void curDep(){
 		Scanner scan = new Scanner(System.in);//Initialize Scanner
 		System.out.println("How much would you like to deposit?");
-		double damount = scan.nextDouble();//Passes users input into double
-		super.depositMoney(damount);//Double is passed into super depositMoney method
+		int damount = scan.nextInt();//Passes users input into int
+		super.depositMoney(damount);//int is passed into super depositMoney method
 	}
 	
 	/**
@@ -35,7 +35,7 @@ public class CurrentAccount extends Account {
 	public void curWithdraw(){
 		Scanner scan = new Scanner(System.in);//Initialize Scanner
 		System.out.println("How much would you like to withdraw?");
-		double wamount = scan.nextDouble();//Passes 
+		int wamount = scan.nextInt();//Passes 
 		super.withdrawMoney(wamount);
 	}
 
