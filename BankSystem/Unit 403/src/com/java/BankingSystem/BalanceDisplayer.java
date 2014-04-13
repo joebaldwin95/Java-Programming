@@ -93,12 +93,9 @@ public class BalanceDisplayer {
 		}
 		public void actionPerformed(ActionEvent e) {
 			CurrentAccount account = new CurrentAccount();
-			Customer customer = new Customer();
-			customer.setFname("Joe");
-			customer.setLname("Baldwin");
 			account.forceDeposit(159);
-			textField_1.setText("£" + account.getBalance());
-			textField.setText(customer.getFname() + " " + customer.getLname());
+			textField.setText("£" + account.getBalance());
+			
 			
 		}
 	}

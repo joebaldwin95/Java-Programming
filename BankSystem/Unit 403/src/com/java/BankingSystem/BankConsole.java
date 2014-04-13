@@ -30,17 +30,30 @@ public class BankConsole {
 		System.out.println("First we will need some basic details to get going...");
 		
 		//NAME INPUT START - TAKES USERS FIRST AND LAST NAME AND SETS THEM INSIDE THE CUSTOMER OBJECT
+		int i = 0;
+		while (i < 2){
 		System.out.println("What is your First Name?");
 		String fname = scan.nextLine();
-		customer.setFname(fname);
+		if (fname.matches("[a-zA-Z]+")){
+			customer.setFname(fname);
+			i++;
+			}
+		else {
+			 System.out.println("Please Only Enter Letters - No Numbers or Special Characters");
+			 }
 		System.out.println("What is your Last Name?");
 		String lname = scan.nextLine();
-		customer.setLname(lname);
+		if (lname.matches("[a-zA-Z]+")){
+			i++;
+			customer.setLname(lname);
+			}
+		else {
+			 System.out.println("Please Only Enter Letters - No Numbers or Special Characters");
+			 }
+		
 		//NAME INPUT END
 		
-		StringBuffer fullname = new StringBuffer();
-		fullname.append(fname + " " + lname);
-		System.out.println("Welcome " + fullname);
+		}
 		
 		//ADDRESS INPUT START - TAKES USERS ADDRESS AND SETS ADDRESS1 AND ADDRESS2 INSIDE CUSTOMER OBJECT
 		System.out.println("What is the first line of you're address?");
@@ -93,14 +106,15 @@ public class BankConsole {
 			//ISA USER MENU START
 			String choice = null;
 			while (choice != "EXIT"){//CREATES USER MENU ONCE ACCOUNT HAS BEEN CREATED
-			System.out.println("--ACCOUNT ADMIN--");
-			System.out.println("Deposits - To deposit into you're ISA type, 'DEPOSIT' ");
-			System.out.println("Withdrawals - To withdraw from you're ISA type, 'WITHDRAW'");
-			System.out.println("Customer Details - To view you're customer details type, 'DETAILS'");
-			System.out.println("Exit - To exit the program type, 'EXIT'");
-			System.out.println("Current Balance - £" + isaaccount.getBalance());//DISPLAYS BALANCE
-			System.out.println("-----------------------------------------------------------------");
+			System.out.println(" ---------------------------ACCOUNT ADMIN-----------------------------");
+			System.out.println("| Deposits - To deposit into you're ISA type, 'DEPOSIT'               |");
+			System.out.println("| Withdrawals - To withdraw from you're ISA type, 'WITHDRAW'          |");
+			System.out.println("| Customer Details - To view you're customer details type, 'DETAILS'  |");
+			System.out.println("| Exit - To exit the program type, 'EXIT'                             |");
+			System.out.println("| Current Balance - £" + isaaccount.getBalance() +"                                                |");//DISPLAYS BALANCE
+			System.out.println(" --------------------------------------------------------------------- ");
 			choice = scan.nextLine();
+			
 				switch (choice){//WAITS FOR RESPONSES
 				case "DEPOSIT":
 					isaaccount.isaDep();//CALLS THE DEPOSIT METHOD INSIDE ISA ACCOUNT

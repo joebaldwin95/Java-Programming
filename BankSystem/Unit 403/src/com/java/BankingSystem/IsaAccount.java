@@ -20,7 +20,7 @@ public class IsaAccount extends Account {
 	  * isalimit sets the limit upto which you can deposit.
 	  * @author Joe Baldwin
 	  */
-	private int isalimit = 5760;
+	private static int isalimit = 5760;
 	
 	/**
 	  * depamount is the amount you wish to deposit.
@@ -65,12 +65,16 @@ public class IsaAccount extends Account {
 		catch (InputMismatchException e) {
 			System.out.println("Please Enter An Amount To Deposit In Your ISA Account In Whole Pounds");
 		}
+		
+		
+		
 		depamount = deposit;//Puts deposit amount into value passed to super method of depositMoney
-		int tempcounter = isacounter;//Creates temporary value to count the deposit limit
-		if (tempcounter >= isalimit) {//Checks the isa counter does not exceed the limit
+		int tempcount = isacounter + depamount;//Creates temporary value to count the deposit limit
+		if (tempcount > isalimit) {//Checks the isa counter does not exceed the limit
 			System.out.println("You have reached you're limit");
-			int max = tempcounter - isalimit;//Evaluates the maximum that can be deposited from the amount previously tried
-			System.out.println("The maximum you can deposit is: £" + max);
+			int max = isalimit + depamount;//Evaluates the maximum that can be deposited from the amount previously tried
+			int maxdep = max - isalimit;
+			System.out.println("The maximum you can deposit is: £" + maxdep);
 			
 		}
 		
@@ -79,7 +83,7 @@ public class IsaAccount extends Account {
 			isacounter = isacounter + depamount;//Adds deposit amount to actual isacounter
 		}
 		}
-		int limitcalc = isalimit - depamount;
+		int limitcalc = isalimit - isacounter;
 		System.out.println("Your ISA Limit Will Be £" + limitcalc);
 		super.depositMoney(depamount);//Passes amount to be deposited to super method depositMoney
 	}

@@ -78,7 +78,7 @@ public class Account {
 		System.out.println("Are you sure you wish to deposit " + "£" + depositamount + " ?" + " -- Your New Balance Would Be " + "£" + tempbalance);
 		System.out.println("Please enter 'Yes' or 'No'");//Provides Response Hint
 		String sure = scan.nextLine();//Checks for keyboard input and passes input to String "sure"
-		if (sure.equals("Yes")) { //Performs deposit if sure returns "Yes"
+		if ((sure.equals("Yes")) || (sure.equals("YES")) || (sure.equals("yes")) ) { //Performs deposit if sure returns "Yes"
 			balance = balance + depositamount;//Actual deposit
 			System.out.println("----DEPOSITING----");
 			System.out.println("SUCCESS!!!");
@@ -105,7 +105,7 @@ public class Account {
 		System.out.println("Are you sure you wish to withdraw " + "£" + withdrawamount + "? " + " -- Your New Balance Would Be " + "£" + tempbalance);
 		System.out.println("Please enter 'Yes' or 'No'");
 		String sure = scan.nextLine();//Passes user input to "sure" to be used in decision making
-		if (sure.equals("Yes")) {//Checks whether the user wants to deposit
+		if ((sure.equals("Yes")) || (sure.equals("YES")) || (sure.equals("yes")) ) {//Checks whether the user wants to deposit
 			balance = balance - withdrawamount;//Performs the withdrawal
 			System.out.println("----WITHDRAWING----");
 			System.out.println("SUCCESS!!!");
